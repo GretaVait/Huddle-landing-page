@@ -1,0 +1,371 @@
+:root {
+    --primary-pink: hsl(322, 100%, 66%);
+    --neutral-cyan: hsl(193, 100%, 96%);
+    --neutral-dark-cyan: hsl(192, 100%, 9%);
+    --neutral-grayish-blue: hsl(208, 11%, 55%);
+    --box-shadow-cyan: rgba(0, 36, 45, 0.4);
+    --box-shadow-pink: rgba(255, 81, 191, 0.7);
+}
+
+/* Main Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    font-size: 18px;
+    color: var(--neutral-dark-cyan);
+}
+
+/* Typography */
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.777em;
+    margin: 100px 10px 50px 10px;
+    color: var(--neutral-dark-cyan);
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.333em;
+    margin: 30px 0;
+    color: var(--neutral-dark-cyan);
+}
+
+p {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0 10px 0 10px;
+    color: var(--neutral-grayish-blue);
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Header */
+
+header {
+    padding: 40px 20px;
+    text-align: center;
+    background-image: url(../images/bg-hero-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 35%;
+}
+
+.img {
+    width: 100%;
+}
+
+.container {
+    align-items: center;
+}
+
+/* Button Styles */
+
+.btn {
+    border-radius: 50px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn--white {
+    padding: 5px 30px;
+    background-color: #fff;
+    box-shadow: 0 0 10px var(--box-shadow-cyan);
+}
+
+.btn--pink {
+    width: 80%;
+    padding: 15px;
+    background-color: var(--primary-pink);
+    color: #fff;
+    box-shadow: 0 0 10px var(--box-shadow-pink);
+    margin: 50px 0;
+}
+
+/* Main */
+
+main {
+    margin: 50px 20px 0 20px;
+    text-align: center;
+}
+
+.card {
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--box-shadow-cyan);
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+/* Banner */
+
+.banner {
+    position: relative;
+    top: 110px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--box-shadow-cyan);
+    text-align: center;
+    padding-top: 50px;
+}
+
+.banner > span {
+    font-weight: 700;
+    color: var(--neutral-dark-cyan);
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--neutral-dark-cyan);
+    color: #fff;
+    padding: 200px 20px 50px 20px;
+}
+
+#copyright {
+    display: block;
+    text-align: center;
+    font-size: 0.75em;
+    margin-top: 20px;
+}
+
+.footer__contact--info {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer__contact--info > span {
+    margin-left: 20px;
+}
+
+.nav__item {
+    margin-top: 20px;
+    display: block;
+}
+
+.social-media {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.circle {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #fff;
+    padding: 10px;
+    margin: 0 15px;
+    border-radius: 50%;
+}
+
+.icon {
+    height: 26px;
+}
+
+@media (min-width: 768px) {
+    /* Header */
+    header {
+        padding: 30px 50px;
+        text-align: left;
+        background-image: url(../images/bg-hero-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .logo {
+        width: initial;
+    }
+
+    .container { /* Header container */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .container--primary {
+        padding-right: 50px;
+    }
+
+    .img { /* All images styling */
+        width: 50%;
+    }
+
+    /* Typography */
+    h1 {
+        margin: 0;
+    }
+
+    p {
+        font-size: 0.75em;
+        margin: 0;
+    }
+
+    /* Buttons */
+    .btn--pink {
+        width: 70%;
+        transition: all 0.2s ease-out 0s;
+    }
+
+    .btn--pink:hover {
+        opacity: 0.5;
+    }
+
+    .btn--white {
+        padding: 10px 35px;
+        transition: all 0.2s ease-out 0s;
+    }
+
+    .btn--white:hover {
+        opacity: 0.5;
+    }
+
+    /* Main */
+    main {
+        margin-top: 200px;
+    }
+
+    .card {
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+
+    .left { /* Show image in .card on the left */
+        order: 2;
+    }
+
+    .card--content { /* heading and paragraph */
+        padding: 70px;
+    }
+
+    .banner {
+        margin: 0 10%;
+    }
+
+    .banner > span {
+        display: block;
+    }
+
+    /* Footer */
+    footer {
+        padding: 200px 50px 50px 50px;
+    }
+
+    .footer__section {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .footer__contact--info > span {
+        font-size: 0.75em;
+    }
+
+    #copyright {
+        text-align: right;
+        font-size: 0.75em;
+    }
+
+    /* Footer columns only on desktop view */
+    .footer__nav {
+        padding-left: 100px;
+    }
+
+    .footer__contact,
+    .footer__nav {
+        width: 30%;
+    }
+
+    /* Nav links */
+    .nav__item {
+        display: block;
+        font-size: 0.75em;
+        transition: all 0.2s ease-out 0s;
+    }
+
+    .nav__item:hover {
+        color: var(--primary-pink);
+    }
+
+    .social-media {
+        margin: 0;
+        width: 20%;
+    }
+
+    .circle {
+        margin: 10px;
+    }
+
+    .circle,
+    .svg path {
+        transition: all 0.3s ease-out 0s;
+        cursor: pointer;
+    }
+
+    .circle:hover svg path {
+        fill: var(--primary-pink);
+    }
+
+    .circle:hover {
+        border: 2px solid var(--primary-pink);
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Typography */
+    h1 {
+        margin: 0 0 50px 0;
+    }
+
+    .circle {
+        display: inherit;
+    }
+}
+
+@media (min-width: 1350px) {
+    .btn--pink {
+        width: 40%;
+    }
+
+    .banner {
+        margin: 0 30%;
+    }
+
+    .footer__contact--info > span {
+        font-size: 1em;
+    }
+
+    .nav__item {
+        font-size: 1em;
+    }
+
+    .circle {
+        display: inline-block;
+    }
+}
